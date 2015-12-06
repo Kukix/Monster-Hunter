@@ -1,0 +1,6 @@
+D:\School\Block 8\MDW\App\Temp\MonsterFeastService\MonsterFeastService\bin\Debug\MonsterFeastService.dll.config
+D:\School\Block 8\MDW\App\Temp\MonsterFeastService\MonsterFeastService\bin\Debug\MonsterFeastService.dll
+D:\School\Block 8\MDW\App\Temp\MonsterFeastService\MonsterFeastService\bin\Debug\MonsterFeastService.pdb
+D:\School\Block 8\MDW\App\Temp\MonsterFeastService\MonsterFeastService\obj\Debug\MonsterFeastService.csprojResolveAssemblyReference.cache
+D:\School\Block 8\MDW\App\Temp\MonsterFeastService\MonsterFeastService\obj\Debug\MonsterFeastService.dll
+D:\School\Block 8\MDW\App\Temp\MonsterFeastService\MonsterFeastService\obj\Debug\MonsterFeastService.pdb

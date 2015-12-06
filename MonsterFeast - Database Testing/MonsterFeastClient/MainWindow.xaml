@@ -1,0 +1,61 @@
+﻿<Window x:Class="MonsterFeastClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="720" Width="1080" Background="#FF262626">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\ButtonTemplate.xaml"/>
+                <ResourceDictionary Source="Resources\TextBoxTemplate.xaml"/>
+                <ResourceDictionary Source="Resources\PasswordBoxTemplate.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Column="0" Stretch="Uniform" Width="300" Source="Resources/logo.png"/>
+        
+        <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,100,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Login Form -->
+            <TextBox Style="{StaticResource TextBoxTemplate}" Grid.Row="0" Name="Nickname"/>
+            <TextBlock IsHitTestVisible="False" Text="Nickname" FontFamily="Manteka" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="12,0,0,0" Foreground="DarkGray" FontSize="18">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=Nickname}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <PasswordBox ToolTip="Password"  Style="{StaticResource PasswordBoxTemplate}" Grid.Row="1" Name="Pass" Password="Password" />
+            <TextBlock IsHitTestVisible="False" Text="Password" FontFamily="Manteka" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="12,0,0,0" Foreground="DarkGray" FontSize="18">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=Pass}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Grid>
+        
+        
+    </Grid>
+</Window>

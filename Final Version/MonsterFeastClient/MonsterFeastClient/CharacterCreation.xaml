@@ -1,0 +1,387 @@
+﻿<Window x:Class="MonsterFeastClient.CharacterCreation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MonsterFeast | Choose Character" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderBrush="Black" BorderThickness="1" Background="#FF262626" WindowStyle="None" WindowState="Maximized" Height="768" Width="1024">
+    <Window.Resources>
+        <Image Source="Resources/Element/Water.png" x:Key="Water" />
+        <Image Source="Resources/Element/Hover/_Water.png" x:Key="_Water" />
+        <Image Source="Resources/Element/Hover/__Water.png" x:Key="__Water"/>
+
+        <Image Source="Resources/Element/Fire.png" x:Key="Fire" />
+        <Image Source="Resources/Element/Hover/_Fire.png" x:Key="_Fire" />
+        <Image Source="Resources/Element/Hover/__Fire.png" x:Key="__Fire"/>
+
+        <Image Source="Resources/Element/Air.png" x:Key="Air" />
+        <Image Source="Resources/Element/Hover/_Air.png" x:Key="_Air" />
+        <Image Source="Resources/Element/Hover/__Air.png" x:Key="__Air"/>
+
+        <Image Source="Resources/Element/Earth.png" x:Key="Earth" />
+        <Image Source="Resources/Element/Hover/_Earth.png" x:Key="_Earth" />
+        <Image Source="Resources/Element/Hover/__Earth.png" x:Key="__Earth"/>
+
+        <Label x:Key="ClassType">Archer</Label>
+
+        <Style x:Key="CloseBtnStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="rectangle" Fill="#FFE2413E"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle" Value="#FFF1514E"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle" Value="#FF87201E"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="LoginTextBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" CornerRadius="0">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Background="#FF333333" BorderBrush="Black" FontFamily="Manteka" FontSize="18.667"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFE2413E"/>
+                                <Setter Property="Background" TargetName="PART_ContentHost" Value="#FF343434"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="Background" TargetName="PART_ContentHost">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF7E7E7E" Offset="0"/>
+                                            <GradientStop Color="#FF292929" Offset="0.897"/>
+                                            <GradientStop Color="#FF424242" Offset="0.039"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFE2413E"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="FontFamily" Value="Manteka"/>
+            <Setter Property="FontSize" Value="18.667"/>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="CharacterNameStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True" CornerRadius="0">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Background="#FF333333" BorderBrush="Black" FontFamily="Manteka" FontSize="18.667" Padding="10,0,0,0"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFE2413E"/>
+                                <Setter Property="Background" TargetName="PART_ContentHost" Value="#FF343434"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="Background" TargetName="PART_ContentHost">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF7E7E7E" Offset="0"/>
+                                            <GradientStop Color="#FF292929" Offset="0.897"/>
+                                            <GradientStop Color="#FF424242" Offset="0.039"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFE2413E"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="FontFamily" Value="Manteka"/>
+            <Setter Property="FontSize" Value="18.667"/>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="LoginButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="rectangle" Fill="#FFE2413E" RadiusY="10" RadiusX="10" Stroke="#FF212121"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle" Value="#FFA22F2D"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFE2413E" Offset="0"/>
+                                            <GradientStop Color="#FFA22F2D" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type ToggleButton}" x:Key="WaterToggleBtnStyle">
+
+            <Setter Property="Content"  Value="{DynamicResource Water}" />
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource _Water}" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource _Water}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource __Water}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type ToggleButton}" x:Key="FireToggleBtnStyle">
+
+            <Setter Property="Content"  Value="{DynamicResource Fire}" />
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource _Fire}" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource _Fire}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource __Fire}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type ToggleButton}" x:Key="AirToggleBtnStyle">
+
+            <Setter Property="Content"  Value="{DynamicResource Air}" />
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource _Air}" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource _Air}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource __Air}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type ToggleButton}" x:Key="EarthToggleBtnStyle">
+
+            <Setter Property="Content"  Value="{DynamicResource Earth}" />
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource _Earth}" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource _Earth}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Content" Value="{DynamicResource __Earth}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+
+        <ControlTemplate x:Key="ControlToggleBtn" TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+        </ControlTemplate>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="RadioButton.Static.Background" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="RadioButton.Static.Border" Color="#FF707070"/>
+        <Style x:Key="OptionMarkFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="14,0,0,0" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ClassTypeStyle" TargetType="{x:Type RadioButton}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <BulletDecorator Cursor="Hand">
+                            <Border Name="borderRadio" BorderThickness="1" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
+                                <Grid>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                                </Grid>
+                            </Border>
+                        </BulletDecorator>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="borderRadio" Property="Background" Value="#FF333333"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter TargetName="borderRadio" Property="Background" Value="#FF333333"/>
+                                <Setter TargetName="borderRadio" Property="BorderBrush" Value="#FFe2413e"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Key="LoadClass">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="stackPanel">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="stackPanel">
+                <EasingThicknessKeyFrame KeyTime="0" Value="0,30,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="-441,30,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="0,30,0,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="LoadCreateChar">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="stackPanel">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="grid">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="0,115,10,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="0,30,10,0"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+
+    </Window.Resources>
+
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderThickness="0,0,0,1" BorderBrush="Black">
+            <Rectangle x:Name="titleRectangle" Fill="#FF333333" Stretch="UniformToFill"/>
+        </Border>
+
+        <Button x:Name="closeBtn" Content="X" HorizontalAlignment="Right" Height="25" Margin="0,0,4,1" Style="{DynamicResource CloseBtnStyle}" VerticalAlignment="Top" Width="50" Click="closeBtn_Click"/>
+        <Label Grid.Row="1" FontFamily="Manteka" FontSize="26.667" Foreground="#FFD7BDBD" BorderThickness="0,30" Content="Choose Your Element!" SnapsToDevicePixels="True" HorizontalContentAlignment="Center" Padding="5,5,5,0" Margin="0"/>
+        <Grid Grid.Row="2" Width="540" Margin="0,5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid Height="200" Grid.Column="0" Margin="0,0,10,0" >
+                <ToggleButton x:Name="btnWater" Style="{DynamicResource WaterToggleBtnStyle}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Template="{DynamicResource ControlToggleBtn}" Click="btnWater_Click"/>
+            </Grid>
+            <Grid Height="200" Grid.Column="1" Margin="0,0,10,0" >
+                <ToggleButton x:Name="btnFire" Style="{DynamicResource FireToggleBtnStyle}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Template="{DynamicResource ControlToggleBtn}" Click="btnFire_Click"/>
+            </Grid>
+            <Grid Height="200" Grid.Column="2" Margin="0,0,10,0" >
+                <ToggleButton x:Name="btnAir" Style="{DynamicResource AirToggleBtnStyle}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Template="{DynamicResource ControlToggleBtn}" Click="btnAir_Click"/>
+            </Grid>
+            <Grid Height="200" Grid.Column="3" Margin="0,0,10,0" >
+                <ToggleButton x:Name="btnEarth" Style="{DynamicResource EarthToggleBtnStyle}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Template="{DynamicResource ControlToggleBtn}" Click="btnEarth_Click"/>
+            </Grid>
+
+        </Grid>
+        <StackPanel x:Name="stackPanel" Grid.Row="3" Orientation="Vertical" Width="540" Margin="0,30,0,0" Visibility="Collapsed">
+            <Label FontFamily="Manteka" FontSize="26.667" Foreground="#FFD7BDBD" BorderThickness="0,0,0,20" Content="Choose Your Class!" SnapsToDevicePixels="True" Margin="0,0,23.333,0" HorizontalContentAlignment="Center"/>
+            <RadioButton x:Name="rbArcher" Content="Archer" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Manteka" BorderBrush="Black" Style="{DynamicResource ClassTypeStyle}" Background="#FF262626" Width="540" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GroupName="ClassType" Height="35" Margin="0,0,0,10" Click="rbArcher_Click"/>
+            <RadioButton x:Name="rbWarrior" Content="Warrior" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Manteka" BorderBrush="Black" Style="{DynamicResource ClassTypeStyle}" Background="#FF262626" Width="540" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GroupName="ClassType" Height="35" Margin="0,0,0,10"  Click="rbArcher_Click"/>
+            <RadioButton x:Name="rbWizard" Content="Wizard" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Manteka" BorderBrush="Black" Style="{DynamicResource ClassTypeStyle}" Background="#FF262626" Width="540" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GroupName="ClassType" Height="35" Click="rbArcher_Click" />
+        </StackPanel>
+        <Grid x:Name="grid" Grid.Row="4" Width="540" Margin="0,30,10,0" Visibility="Collapsed">
+            <StackPanel Width="auto" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label FontFamily="Manteka" FontSize="26.667" Foreground="#FFD7BDBD" BorderThickness="0,0,0,20" Content="Please enter your character name" SnapsToDevicePixels="True"/>
+                <TextBox x:Name="tbName" Style="{DynamicResource CharacterNameStyle}" VerticalContentAlignment="Center" Text="Name" FontFamily="Roboto" BorderThickness="1" Margin="0,0,0,10" Padding="10,0,0,0" Width="250" GotFocus="tbName_GotFocus"/>
+                <Button x:Name="btnCreate" Content="CREATE" HorizontalAlignment="Center" Height="35" Style="{DynamicResource LoginButtonStyle}" VerticalAlignment="Center" Width="150" Padding="1" Click="btnCreate_Click"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

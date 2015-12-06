@@ -1,0 +1,4 @@
+Tried accessing the service from anotehr machine and that's why the service and client are configured with 
+an IP address, to change that set the base address back to localhost
+Added the create Character, and Registration also managed to fix the problem with extracting and saving
+Enum data from and to the database

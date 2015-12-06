@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MonsterFeastService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MonsterFeastService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Player">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Character" nillable="true" type="tns:Character" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Loses" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Wins" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Player" nillable="true" type="tns:Player" />
+  <xs:complexType name="Character">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agility" type="xs:int" />
+      <xs:element minOccurs="0" name="AttributePoints" type="xs:int" />
+      <xs:element minOccurs="0" name="CharClass" type="tns:CharClass" />
+      <xs:element minOccurs="0" name="Constitution" type="xs:int" />
+      <xs:element minOccurs="0" name="Dexterity" type="xs:int" />
+      <xs:element minOccurs="0" name="Element" type="tns:Element" />
+      <xs:element minOccurs="0" name="Experience" type="xs:int" />
+      <xs:element minOccurs="0" name="Level" type="xs:int" />
+      <xs:element minOccurs="0" name="Magic" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SkillPoints" type="xs:int" />
+      <xs:element minOccurs="0" name="Strength" type="xs:int" />
+      <xs:element minOccurs="0" name="Wisdom" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Character" nillable="true" type="tns:Character" />
+  <xs:simpleType name="CharClass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Warrior" />
+      <xs:enumeration value="Wizard" />
+      <xs:enumeration value="Archer" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CharClass" nillable="true" type="tns:CharClass" />
+  <xs:simpleType name="Element">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Water" />
+      <xs:enumeration value="Fire" />
+      <xs:enumeration value="Air" />
+      <xs:enumeration value="Earth" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Element" nillable="true" type="tns:Element" />
+  <xs:simpleType name="Attribute">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Strength" />
+      <xs:enumeration value="Constitution" />
+      <xs:enumeration value="Magic" />
+      <xs:enumeration value="Wisdom" />
+      <xs:enumeration value="Agility" />
+      <xs:enumeration value="Dexterity" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Attribute" nillable="true" type="tns:Attribute" />
+  <xs:complexType name="ArrayOfPlayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Player" nillable="true" type="tns:Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayer" nillable="true" type="tns:ArrayOfPlayer" />
+  <xs:complexType name="ArrayOfMatch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Match" nillable="true" type="tns:Match" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMatch" nillable="true" type="tns:ArrayOfMatch" />
+  <xs:complexType name="Match">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GameChat" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Player1" nillable="true" type="tns:Player" />
+      <xs:element minOccurs="0" name="Player2" nillable="true" type="tns:Player" />
+      <xs:element minOccurs="0" name="RmNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Turn" nillable="true" type="tns:Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Match" nillable="true" type="tns:Match" />
+  <xs:complexType name="Skill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Effect" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Element" type="tns:Element" />
+      <xs:element minOccurs="0" name="PowerName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Skill" nillable="true" type="tns:Skill" />
+</xs:schema>

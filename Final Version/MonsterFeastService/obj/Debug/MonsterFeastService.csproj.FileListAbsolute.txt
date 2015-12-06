@@ -1,0 +1,24 @@
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastService\bin\Debug\MonsterFeastService.dll.config
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastService\bin\Debug\MonsterFeastService.dll
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastService\bin\Debug\MonsterFeastService.pdb
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastService\obj\Debug\MonsterFeastService.csprojResolveAssemblyReference.cache
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastService\obj\Debug\MonsterFeastService.dll
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastService\obj\Debug\MonsterFeastService.pdb
+D:\School\Year 2\MDW\Testing\We must go deeper\MonsterFeast - Database Testing\MonsterFeastService\obj\Debug\MonsterFeastService.csprojResolveAssemblyReference.cache
+D:\School\Year 2\MDW\Testing\We must go deeper\MonsterFeast - Database Testing\MonsterFeastService\obj\Debug\MonsterFeastService.dll
+D:\School\Year 2\MDW\Testing\We must go deeper\MonsterFeast - Database Testing\MonsterFeastService\obj\Debug\MonsterFeastService.pdb
+D:\School\Year 2\MDW\Testing\We must go deeper\MonsterFeast - Database Testing\MonsterFeastService\bin\Debug\MonsterFeastService.dll.config
+D:\School\Year 2\MDW\Testing\We must go deeper\MonsterFeast - Database Testing\MonsterFeastService\bin\Debug\MonsterFeastService.dll
+D:\School\Year 2\MDW\Testing\We must go deeper\MonsterFeast - Database Testing\MonsterFeastService\bin\Debug\MonsterFeastService.pdb
+D:\School\Year 2\MDW\Testing\More testing\MonsterFeastService\bin\Debug\MonsterFeastService.dll.config
+D:\School\Year 2\MDW\Testing\More testing\MonsterFeastService\bin\Debug\MonsterFeastService.dll
+D:\School\Year 2\MDW\Testing\More testing\MonsterFeastService\bin\Debug\MonsterFeastService.pdb
+D:\School\Year 2\MDW\Testing\More testing\MonsterFeastService\obj\Debug\MonsterFeastService.csprojResolveAssemblyReference.cache
+D:\School\Year 2\MDW\Testing\More testing\MonsterFeastService\obj\Debug\MonsterFeastService.dll
+D:\School\Year 2\MDW\Testing\More testing\MonsterFeastService\obj\Debug\MonsterFeastService.pdb
+D:\School\Year 2\MDW\Testing\More testing-Kalina\MonsterFeastService\obj\Debug\MonsterFeastService.csprojResolveAssemblyReference.cache
+D:\School\Year 2\MDW\Testing\More testing-Kalina\MonsterFeastService\obj\Debug\MonsterFeastService.dll
+D:\School\Year 2\MDW\Testing\More testing-Kalina\MonsterFeastService\obj\Debug\MonsterFeastService.pdb
+D:\School\Year 2\MDW\Testing\More testing-Kalina\MonsterFeastService\bin\Debug\MonsterFeastService.dll.config
+D:\School\Year 2\MDW\Testing\More testing-Kalina\MonsterFeastService\bin\Debug\MonsterFeastService.dll
+D:\School\Year 2\MDW\Testing\More testing-Kalina\MonsterFeastService\bin\Debug\MonsterFeastService.pdb

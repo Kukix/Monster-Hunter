@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5f5d1e4d-ba11-413c-a8dd-a066a849dbf1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/MonsterFeastService/CGame/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MonsterFeastContract.wsdl" MetadataType="Wsdl" ID="d2a9aa2b-7601-482c-a4e0-15f4f4569a4b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MonsterFeastService/CGame/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="69233973-1968-4d9b-88a0-503af391dfe1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MonsterFeastService/CGame/mex" />
+    <MetadataFile FileName="MonsterFeastContract.xsd" MetadataType="Schema" ID="9e682602-bf5d-49cb-b9c9-58be7fb18680" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MonsterFeastService/CGame/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="9dcd547f-2577-4287-a583-55361a15da65" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MonsterFeastService/CGame/mex" />
+    <MetadataFile FileName="MonsterFeastService.xsd" MetadataType="Schema" ID="b6989a4f-eb7a-4724-90cf-75c94f5949f3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MonsterFeastService/CGame/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="78d65cec-da84-4db7-bd32-0bce6e2c57df" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/MonsterFeastService/CGame/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="MonsterFeastService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="MonsterFeastService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="MonsterFeastService/Imports">
+      <xsd:import namespace="MonsterFeastService" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MonsterFeastService" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILogin_isRegistered_InputMessage">
+    <wsdl:part name="parameters" element="tns:isRegistered" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_isRegistered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_hasChar_InputMessage">
+    <wsdl:part name="parameters" element="tns:hasChar" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_hasChar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:hasCharResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_createCharacter_InputMessage">
+    <wsdl:part name="parameters" element="tns:createCharacter" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_createCharacter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createCharacterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_addToList_InputMessage">
+    <wsdl:part name="parameters" element="tns:addToList" />
+  </wsdl:message>
+  <wsdl:message name="ILogin_addToList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addToListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_FindMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMatch" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_FindMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_AllocateAttribute_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllocateAttribute" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_AllocateAttribute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllocateAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_SubscribeMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeMatch" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_SubscribeMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_UnSubscribeMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeMatch" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_UnSubscribeMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_SubscribeListPlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeListPlayers" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_SubscribeListPlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeListPlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_UnSubscribeListPlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeListPlayers" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_UnSubscribeListPlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeListPlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_SubscribeLobby_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeLobby" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_SubscribeLobby_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeLobbyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_UnSubscribeLobby_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeLobby" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_UnSubscribeLobby_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeLobbyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_getOnlinePlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOnlinePlayers" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_getOnlinePlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOnlinePlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_getPlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPlayer" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_getPlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_getPlayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPlayers" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_getPlayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_getCharacter_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCharacter" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_getCharacter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCharacterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_sendChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:sendChallenge" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_sendChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sendChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_answerChallenge_InputMessage">
+    <wsdl:part name="parameters" element="tns:answerChallenge" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_answerChallenge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:answerChallengeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_updateAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateAttributes" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_updateAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_createRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:createRoom" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_createRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_joinRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:joinRoom" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_joinRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:joinRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_SendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_SendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_GetChatMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatMessage" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_GetChatMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_updateChatBox_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:updateChatBox" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_updatePlayerList_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:updatePlayerList" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_updateMatchList_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:updateMatchList" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_ChallengeSent_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ChallengeSent" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_ChallengeDenied_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ChallengeDenied" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_ChallengeAccepted_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ChallengeAccepted" />
+  </wsdl:message>
+  <wsdl:message name="ILobby_GameCreated_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:GameCreated" />
+  </wsdl:message>
+  <wsdl:portType name="ILogin">
+    <wsdl:operation name="isRegistered">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILogin/isRegistered" message="tns:ILogin_isRegistered_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILogin/isRegisteredResponse" message="tns:ILogin_isRegistered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILogin/Register" message="tns:ILogin_Register_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILogin/RegisterResponse" message="tns:ILogin_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILogin/Login" message="tns:ILogin_Login_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILogin/LoginResponse" message="tns:ILogin_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILogin/Logout" message="tns:ILogin_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILogin/LogoutResponse" message="tns:ILogin_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="hasChar">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILogin/hasChar" message="tns:ILogin_hasChar_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILogin/hasCharResponse" message="tns:ILogin_hasChar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createCharacter">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILogin/createCharacter" message="tns:ILogin_createCharacter_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILogin/createCharacterResponse" message="tns:ILogin_createCharacter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addToList">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILogin/addToList" message="tns:ILogin_addToList_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILogin/addToListResponse" message="tns:ILogin_addToList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ILobby">
+    <wsdl:operation name="FindMatch">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/FindMatch" message="tns:ILobby_FindMatch_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/FindMatchResponse" message="tns:ILobby_FindMatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllocateAttribute">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/AllocateAttribute" message="tns:ILobby_AllocateAttribute_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/AllocateAttributeResponse" message="tns:ILobby_AllocateAttribute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscribeMatch">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/SubscribeMatch" message="tns:ILobby_SubscribeMatch_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/SubscribeMatchResponse" message="tns:ILobby_SubscribeMatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnSubscribeMatch">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/UnSubscribeMatch" message="tns:ILobby_UnSubscribeMatch_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/UnSubscribeMatchResponse" message="tns:ILobby_UnSubscribeMatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscribeListPlayers">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/SubscribeListPlayers" message="tns:ILobby_SubscribeListPlayers_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/SubscribeListPlayersResponse" message="tns:ILobby_SubscribeListPlayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnSubscribeListPlayers">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/UnSubscribeListPlayers" message="tns:ILobby_UnSubscribeListPlayers_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/UnSubscribeListPlayersResponse" message="tns:ILobby_UnSubscribeListPlayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscribeLobby">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/SubscribeLobby" message="tns:ILobby_SubscribeLobby_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/SubscribeLobbyResponse" message="tns:ILobby_SubscribeLobby_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnSubscribeLobby">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/UnSubscribeLobby" message="tns:ILobby_UnSubscribeLobby_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/UnSubscribeLobbyResponse" message="tns:ILobby_UnSubscribeLobby_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOnlinePlayers">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/getOnlinePlayers" message="tns:ILobby_getOnlinePlayers_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/getOnlinePlayersResponse" message="tns:ILobby_getOnlinePlayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPlayer">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/getPlayer" message="tns:ILobby_getPlayer_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/getPlayerResponse" message="tns:ILobby_getPlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPlayers">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/getPlayers" message="tns:ILobby_getPlayers_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/getPlayersResponse" message="tns:ILobby_getPlayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCharacter">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/getCharacter" message="tns:ILobby_getCharacter_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/getCharacterResponse" message="tns:ILobby_getCharacter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sendChallenge">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/sendChallenge" message="tns:ILobby_sendChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/sendChallengeResponse" message="tns:ILobby_sendChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="answerChallenge">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/answerChallenge" message="tns:ILobby_answerChallenge_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/answerChallengeResponse" message="tns:ILobby_answerChallenge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAttributes">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/updateAttributes" message="tns:ILobby_updateAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/updateAttributesResponse" message="tns:ILobby_updateAttributes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createRoom">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/createRoom" message="tns:ILobby_createRoom_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/createRoomResponse" message="tns:ILobby_createRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="joinRoom">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/joinRoom" message="tns:ILobby_joinRoom_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/joinRoomResponse" message="tns:ILobby_joinRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/SendMessage" message="tns:ILobby_SendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/SendMessageResponse" message="tns:ILobby_SendMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChatMessage">
+      <wsdl:input wsaw:Action="MonsterFeastService/ILobby/GetChatMessage" message="tns:ILobby_GetChatMessage_InputMessage" />
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/GetChatMessageResponse" message="tns:ILobby_GetChatMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateChatBox">
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/updateChatBox" message="tns:ILobby_updateChatBox_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayerList">
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/updatePlayerList" message="tns:ILobby_updatePlayerList_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMatchList">
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/updateMatchList" message="tns:ILobby_updateMatchList_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChallengeSent">
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/ChallengeSent" message="tns:ILobby_ChallengeSent_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChallengeDenied">
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/ChallengeDenied" message="tns:ILobby_ChallengeDenied_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChallengeAccepted">
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/ChallengeAccepted" message="tns:ILobby_ChallengeAccepted_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GameCreated">
+      <wsdl:output wsaw:Action="MonsterFeastService/ILobby/GameCreated" message="tns:ILobby_GameCreated_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

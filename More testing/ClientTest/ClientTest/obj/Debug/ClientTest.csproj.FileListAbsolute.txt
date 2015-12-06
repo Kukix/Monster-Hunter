@@ -1,0 +1,12 @@
+D:\School\Year 2\MDW\Testing\More testing\ClientTest\ClientTest\bin\Debug\ClientTest.exe.config
+D:\School\Year 2\MDW\Testing\More testing\ClientTest\ClientTest\obj\Debug\ClientTest.csprojResolveAssemblyReference.cache
+D:\School\Year 2\MDW\Testing\More testing\ClientTest\ClientTest\obj\Debug\ClientTest.Form1.resources
+D:\School\Year 2\MDW\Testing\More testing\ClientTest\ClientTest\obj\Debug\ClientTest.Properties.Resources.resources
+D:\School\Year 2\MDW\Testing\More testing\ClientTest\ClientTest\obj\Debug\ClientTest.csproj.GenerateResource.Cache
+D:\School\Year 2\MDW\Testing\More testing\ClientTest\ClientTest\bin\Debug\ClientTest.exe
+D:\School\Year 2\MDW\Testing\More testing\ClientTest\ClientTest\bin\Debug\ClientTest.pdb
+D:\School\Year 2\MDW\Testing\More testing\ClientTest\ClientTest\obj\Debug\ClientTest.exe
+D:\School\Year 2\MDW\Testing\More testing\ClientTest\ClientTest\obj\Debug\ClientTest.pdb
+D:\School\Block 8\REPO\trunk\More testing\ClientTest\ClientTest\bin\Debug\ClientTest.exe.config
+D:\School\Block 8\REPO\trunk\More testing\ClientTest\ClientTest\obj\Debug\ClientTest.exe
+D:\School\Block 8\REPO\trunk\More testing\ClientTest\ClientTest\obj\Debug\ClientTest.pdb

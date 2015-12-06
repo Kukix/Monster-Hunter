@@ -1,0 +1,59 @@
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\bin\Debug\MonsterFeastClient.exe.config
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\bin\Debug\MonsterFeastClient.exe
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\bin\Debug\MonsterFeastClient.pdb
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\MonsterFeastClient.csprojResolveAssemblyReference.cache
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\App.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\MonsterFeastClient_MarkupCompile.cache
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\MonsterFeastClient.g.resources
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\MonsterFeastClient.Properties.Resources.resources
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\MonsterFeastClient.csproj.GenerateResource.Cache
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\MonsterFeastClient.exe
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\MonsterFeastClient.pdb
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\Views\LoginWindow.baml
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\Views\MainWindow.baml
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\Views\UCLogin.baml
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\Views\LoginWindow.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\Views\MainWindow.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient\MonsterFeastClient\obj\Debug\Views\UCLogin.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\bin\Debug\MonsterFeastClient.exe.config
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.exe
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.pdb
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.csprojResolveAssemblyReference.cache
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MainWindow.baml
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCLogin.baml
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MainWindow.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCLogin.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\App.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient_MarkupCompile.cache
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.g.resources
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.Properties.Resources.resources
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.csproj.GenerateResource.Cache
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCCharOption.baml
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCLobby.baml
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCRegister.baml
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCCharOption.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCLobby.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCRegister.g.cs
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\bin\Debug\MonsterFeastClient.exe
+D:\School\Block 8\MDW\App\Temp\MonsterFeastClient - MVVM\MonsterFeastClient\bin\Debug\MonsterFeastClient.pdb
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\bin\Debug\MonsterFeastClient.exe.config
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.exe
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.pdb
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\bin\Debug\MonsterFeastClient.exe
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\bin\Debug\MonsterFeastClient.pdb
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.csprojResolveAssemblyReference.cache
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MainWindow.baml
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCCharOption.baml
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCLobby.baml
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCLogin.baml
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCRegister.baml
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MainWindow.g.cs
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCCharOption.g.cs
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCLobby.g.cs
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCLogin.g.cs
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\Views\UCRegister.g.cs
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\App.g.cs
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient_MarkupCompile.cache
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.g.resources
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.Properties.Resources.resources
+D:\School\Year 2\MDW\Repository\2015groep034\trunk\MonsterFeastClient - MVVM\MonsterFeastClient\obj\Debug\MonsterFeastClient.csproj.GenerateResource.Cache

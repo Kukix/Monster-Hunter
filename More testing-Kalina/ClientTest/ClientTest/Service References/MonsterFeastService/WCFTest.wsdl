@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="WCFTest" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="WCFTest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="WCFTest/Imports">
+      <xsd:import namespace="WCFTest" />
+      <xsd:import namespace="MonsterFeastService" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MonsterFeastService" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGame_attack_InputMessage">
+    <wsdl:part name="parameters" element="tns:attack" />
+  </wsdl:message>
+  <wsdl:message name="IGame_attack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:attackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_usePoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:usePoint" />
+  </wsdl:message>
+  <wsdl:message name="IGame_usePoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:usePointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_giveUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:giveUp" />
+  </wsdl:message>
+  <wsdl:message name="IGame_giveUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:giveUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_sendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:sendMessage" />
+  </wsdl:message>
+  <wsdl:message name="IGame_sendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_SubscribeMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeMatch" />
+  </wsdl:message>
+  <wsdl:message name="IGame_SubscribeMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_UnSubscribeMatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeMatch" />
+  </wsdl:message>
+  <wsdl:message name="IGame_UnSubscribeMatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGame_TurnStart_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:TurnStart" />
+  </wsdl:message>
+  <wsdl:message name="IGame_TurnEnded_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:TurnEnded" />
+  </wsdl:message>
+  <wsdl:portType name="IGame">
+    <wsdl:operation name="attack">
+      <wsdl:input wsaw:Action="WCFTest/IGame/attack" message="tns:IGame_attack_InputMessage" />
+      <wsdl:output wsaw:Action="WCFTest/IGame/attackResponse" message="tns:IGame_attack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="usePoint">
+      <wsdl:input wsaw:Action="WCFTest/IGame/usePoint" message="tns:IGame_usePoint_InputMessage" />
+      <wsdl:output wsaw:Action="WCFTest/IGame/usePointResponse" message="tns:IGame_usePoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="giveUp">
+      <wsdl:input wsaw:Action="WCFTest/IGame/giveUp" message="tns:IGame_giveUp_InputMessage" />
+      <wsdl:output wsaw:Action="WCFTest/IGame/giveUpResponse" message="tns:IGame_giveUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMessage">
+      <wsdl:input wsaw:Action="WCFTest/IGame/sendMessage" message="tns:IGame_sendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="WCFTest/IGame/sendMessageResponse" message="tns:IGame_sendMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscribeMatch">
+      <wsdl:input wsaw:Action="WCFTest/IGame/SubscribeMatch" message="tns:IGame_SubscribeMatch_InputMessage" />
+      <wsdl:output wsaw:Action="WCFTest/IGame/SubscribeMatchResponse" message="tns:IGame_SubscribeMatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnSubscribeMatch">
+      <wsdl:input wsaw:Action="WCFTest/IGame/UnSubscribeMatch" message="tns:IGame_UnSubscribeMatch_InputMessage" />
+      <wsdl:output wsaw:Action="WCFTest/IGame/UnSubscribeMatchResponse" message="tns:IGame_UnSubscribeMatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TurnStart">
+      <wsdl:output wsaw:Action="WCFTest/IGame/TurnStart" message="tns:IGame_TurnStart_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TurnEnded">
+      <wsdl:output wsaw:Action="WCFTest/IGame/TurnEnded" message="tns:IGame_TurnEnded_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

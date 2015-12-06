@@ -1,0 +1,2 @@
+added mysql.data file in the bin/debug of the service folder, then added a reference to that file. Added the databse 
+sql file to generate database.

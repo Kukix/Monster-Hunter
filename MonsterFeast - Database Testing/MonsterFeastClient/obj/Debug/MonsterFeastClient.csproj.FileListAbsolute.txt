@@ -1,0 +1,15 @@
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\bin\Debug\MonsterFeastClient.exe.config
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\bin\Debug\MonsterFeastClient.exe
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\bin\Debug\MonsterFeastClient.pdb
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\MainWindow.baml
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\MainWindow.g.cs
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\App.g.cs
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\MonsterFeastClient_MarkupCompile.cache
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\MonsterFeastClient.g.resources
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\MonsterFeastClient.Properties.Resources.resources
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\MonsterFeastClient.csproj.GenerateResource.Cache
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\MonsterFeastClient.exe
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\MonsterFeastClient.pdb
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\Resources\ButtonTemplate.baml
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\Resources\TextBoxTemplate.baml
+D:\School\Block 8\MDW\MonsterFeast\MonsterFeastClient\obj\Debug\Resources\PasswordBoxTemplate.baml

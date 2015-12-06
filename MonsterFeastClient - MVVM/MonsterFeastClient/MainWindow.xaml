@@ -1,0 +1,10 @@
+﻿<Window x:Class="MonsterFeastClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MonsterFeast!" Height="720" Width="1080" WindowState="Maximized" ResizeMode="CanMinimize">
+    <Grid>
+        <Button x:Name="btnLogin" Click="btnLogin_Click" Content="Login" HorizontalAlignment="Left" Margin="244,109,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnRegister" Click="btnRegister_Click" Content="Register" HorizontalAlignment="Left" Margin="344,109,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnLobby" Click="btnLobby_Click" Content="Lobby" HorizontalAlignment="Left" Margin="444,109,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>
